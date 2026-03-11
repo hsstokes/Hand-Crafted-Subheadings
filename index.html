@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Stamped Display Alphabet - Creative Digital Skills</title>
+<title>Hand-Crafted Subheadings - Creative Digital Skills</title>
 <style>
 :root {
   --primary: #ea37a3;
@@ -19,8 +19,12 @@
   --inclass-light: #f5ffff;
   --homework-banner: #ffebf5;
   --inclass-banner: #e6ffff;
-  --quiz: #4682b4;
-  --quiz-light: #f0f8ff;
+  --task2: #6b5b95;
+  --task2-light: #f5f3f7;
+  --task2-banner: #efe9f4;
+  --task3: #c45c4a;
+  --task3-light: #fdf5f3;
+  --task3-banner: #fceae6;
 }
 
 * {
@@ -76,7 +80,7 @@ body {
 
 .main-navigation {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
   margin: 25px 0;
 }
@@ -104,14 +108,14 @@ body {
 }
 
 .nav-block h3 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 0 0 6px 0;
   position: relative;
   z-index: 2;
 }
 
 .nav-block p {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin: 0;
   opacity: 0.8;
   position: relative;
@@ -146,21 +150,21 @@ body {
 }
 
 .nav-task2 {
-  border-color: #9b59b6;
-  background-color: #f5eef8;
+  border-color: var(--task2);
+  background-color: var(--task2-light);
 }
 
 .nav-task2 h3 {
-  color: #9b59b6;
+  color: var(--task2);
 }
 
 .nav-task3 {
-  border-color: var(--quiz);
-  background-color: var(--quiz-light);
+  border-color: var(--task3);
+  background-color: var(--task3-light);
 }
 
 .nav-task3 h3 {
-  color: var(--quiz);
+  color: var(--task3);
 }
 
 .active-block {
@@ -323,23 +327,23 @@ p {
 }
 
 .task2-banner {
-  background-color: #f5eef8;
-  border: 2px solid #9b59b6;
-  color: #9b59b6;
+  background-color: var(--task2-banner);
+  border: 2px solid var(--task2);
+  color: var(--task2);
 }
 
 .task2-banner::before {
-  background-color: #9b59b6;
+  background-color: var(--task2);
 }
 
-.quiz-banner {
-  background-color: var(--quiz-light);
-  border: 2px solid var(--quiz);
-  color: var(--quiz);
+.task3-banner {
+  background-color: var(--task3-banner);
+  border: 2px solid var(--task3);
+  color: var(--task3);
 }
 
-.quiz-banner::before {
-  background-color: var(--quiz);
+.task3-banner::before {
+  background-color: var(--task3);
 }
 
 .workflow-box {
@@ -727,13 +731,258 @@ footer {
   margin-top: 10px;
   font-style: italic;
 }
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.option-card {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.option-card .icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.option-card h4 {
+  margin: 0 0 5px 0;
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+.option-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.upload-box {
+  background: var(--inclass-banner);
+  border: 2px solid var(--inclass);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.upload-box h3 {
+  color: var(--inclass);
+  margin: 0 0 15px 0;
+}
+
+.upload-box p {
+  margin: 0 0 15px 0;
+}
+
+.upload-btn {
+  display: inline-block;
+  background: var(--inclass);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(10, 128, 128, 0.3);
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.column-card {
+  background: white;
+  border: 2px solid var(--task2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.column-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.column-card h4 {
+  color: var(--task2);
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.column-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.reference-example {
+  background: #f9f9f9;
+  border: 2px dashed var(--task2);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.reference-example h4 {
+  color: var(--task2);
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+}
+
+.reference-example code {
+  display: block;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--task2);
+}
+
+.reference-example .label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.reflection-card {
+  background: white;
+  border: 2px solid var(--task3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.reflection-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(196, 92, 74, 0.2);
+}
+
+.reflection-card .number {
+  width: 40px;
+  height: 40px;
+  background: var(--task3);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 12px;
+}
+
+.reflection-card h4 {
+  color: var(--task3);
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.reflection-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.tool-preview {
+  background: linear-gradient(135deg, var(--task3-light) 0%, #fff 100%);
+  border: 2px solid var(--task3);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.tool-preview h3 {
+  color: var(--task3);
+  margin: 0 0 15px 0;
+}
+
+.tool-preview p {
+  margin: 0 0 20px 0;
+  color: #555;
+}
+
+.tool-btn {
+  display: inline-block;
+  background: var(--task3);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(196, 92, 74, 0.3);
+}
+
+.tool-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(196, 92, 74, 0.4);
+}
+
+.tool-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.tool-feature {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.tool-feature .icon {
+  font-size: 1.3rem;
+}
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>🔤 Stamped Display Alphabet</h1>
-  <p style="text-align: center; font-size: 1.05rem; color: #666;">Create Subheadings for Your Portfolio Pages</p>
+  <h1>✋ Hand-Crafted Subheadings</h1>
+  <p style="text-align: center; font-size: 1.05rem; color: #666;">Create Textured Titles for Your Portfolio Pages</p>
 
   <!-- Connection to previous sessions -->
   <div class="connection-box">
@@ -745,7 +994,7 @@ footer {
       </div>
       <div class="connection-item">
         <span class="icon">🎨</span>
-        <span><strong>Session 2:</strong> Foam stamping</span>
+        <span><strong>Session 2:</strong> Mark-making techniques</span>
       </div>
     </div>
   </div>
@@ -763,19 +1012,19 @@ footer {
     </div>
     <div class="nav-block nav-homework" data-section="homework">
       <h3>Homework</h3>
-      <p>Stamp Letters</p>
+      <p>Create Letters</p>
     </div>
     <div class="nav-block nav-task1" data-section="task1">
       <h3>Task 1</h3>
-      <p>Build Alphabet</p>
+      <p>Upload Outcome</p>
     </div>
     <div class="nav-block nav-task2" data-section="task2">
       <h3>Task 2</h3>
-      <p>Create Subheading</p>
+      <p>Edit & Refine A3</p>
     </div>
     <div class="nav-block nav-task3" data-section="task3">
       <h3>Task 3</h3>
-      <p>Save Progress</p>
+      <p>Reflect & Document</p>
     </div>
   </div>
 
@@ -783,13 +1032,13 @@ footer {
   <div id="overview" class="content-section active">
     
     <h2>What is This?</h2>
-    <p>You will make <strong>stamped letters</strong> to use as subheadings on your portfolio pages. These letters have texture and character. They introduce the focus of each page.</p>
+    <p>You will create <strong>hand-crafted letters</strong> to use as subheadings on your portfolio pages. These letters have texture and character — they introduce the focus of each page.</p>
     
     <div class="info-box">
       <strong>How to use them:</strong> Small subheadings that introduce each section of your research. Think poetic, not descriptive. A short title or quote that captures your idea.
     </div>
 
-    <h2>Two Types of Text</h2>
+    <h2>Two Types of Text in Your Portfolio</h2>
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin: 25px 0;">
       <div style="background: white; border: 2px solid var(--secondary); border-radius: 12px; padding: 20px; text-align: center;">
@@ -798,16 +1047,52 @@ footer {
         <p style="margin: 0; font-size: 0.9rem; color: #666;">Labels and notes</p>
       </div>
       <div style="background: white; border: 2px solid var(--primary); border-radius: 12px; padding: 20px; text-align: center;">
-        <div style="font-size: 1.5rem; margin-bottom: 10px;">🔤</div>
-        <h4 style="color: var(--primary); margin: 0 0 8px 0;">Display Alphabet</h4>
-        <p style="margin: 0; font-size: 0.9rem; color: #666;">Subheadings with texture</p>
+        <div style="font-size: 1.5rem; margin-bottom: 10px;">✋</div>
+        <h4 style="color: var(--primary); margin: 0 0 8px 0;">Hand-Crafted Subheadings</h4>
+        <p style="margin: 0; font-size: 0.9rem; color: #666;">Textured titles with character</p>
+      </div>
+    </div>
+
+    <h2>Ways to Create Your Letters</h2>
+    <p>Choose any method that suits your style:</p>
+    
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="icon">🔠</div>
+        <h4>Printing Set</h4>
+        <p>Traditional letter stamps</p>
+      </div>
+      <div class="option-card">
+        <div class="icon">🧽</div>
+        <h4>Foam Stamps</h4>
+        <p>Cut your own letters</p>
+      </div>
+      <div class="option-card">
+        <div class="icon">✂️</div>
+        <h4>Collage</h4>
+        <p>Cut from magazines</p>
+      </div>
+      <div class="option-card">
+        <div class="icon">✏️</div>
+        <h4>Draw</h4>
+        <p>Hand-drawn letters</p>
+      </div>
+      <div class="option-card">
+        <div class="icon">🖌️</div>
+        <h4>Paint</h4>
+        <p>Brush lettering</p>
+      </div>
+      <div class="option-card">
+        <div class="icon">🎨</div>
+        <h4>Mixed Media</h4>
+        <p>Combine techniques</p>
       </div>
     </div>
 
     <h2>Example</h2>
     <!-- PLACEHOLDER: overview-example.jpg -->
-    <img src="overview-example.jpg" alt="Example of stamped subheading on portfolio page" class="example-image clickable-image" onclick="openModal(this.src)">
-    <p class="image-caption">Stamped subheading on a portfolio page</p>
+    <img src="overview-example.jpg" alt="Example of hand-crafted subheading on portfolio page" class="example-image clickable-image" onclick="openModal(this.src)">
+    <p class="image-caption">Hand-crafted subheading on a portfolio page</p>
 
     <div class="nav-buttons">
       <button class="nav-btn prev-btn" disabled>Previous</button>
@@ -818,10 +1103,10 @@ footer {
   <!-- ==================== HOMEWORK ==================== -->
   <div id="homework" class="content-section">
     <div class="section-banner homework-banner">
-      HOMEWORK: Stamp Your Letters
+      HOMEWORK: Create Your Letters
     </div>
 
-    <p>Do this <strong>before class</strong>. Bring your scanned template.</p>
+    <p>Complete this <strong>before class</strong>. Bring your scanned template.</p>
 
     <div class="workflow-box" style="border-color: var(--homework);">
       <div class="workflow-header" style="background: var(--homework);">
@@ -832,23 +1117,37 @@ footer {
           <div class="step-number" style="background: var(--homework);">1</div>
           <div class="step-title" style="color: var(--homework);">Download Template</div>
           <div class="step-content">
-            <p>Go to <a href="https://www.calligraphr.com" target="_blank" style="color: var(--primary);">Calligraphr.com</a> and download a template. Choose only the letters you need.</p>
+            <p>Go to <a href="https://www.calligraphr.com" target="_blank" style="color: var(--primary);">Calligraphr.com</a> and download a template. Select only the letters you need for your subheadings.</p>
           </div>
         </div>
         
         <div class="step">
           <div class="step-number" style="background: var(--homework);">2</div>
-          <div class="step-title" style="color: var(--homework);">Stamp Letters</div>
+          <div class="step-title" style="color: var(--homework);">Print Template</div>
           <div class="step-content">
-            <p>Use your foam stamps from Session 2 (or make new ones). Stamp each letter into a template box.</p>
-            <div class="important-notice">
-              <strong>Remember:</strong> Letters need to be backwards on your stamp!
-            </div>
+            <p>Print the template. Each letter has a box — your letters must fit inside these boxes.</p>
           </div>
         </div>
         
         <div class="step">
           <div class="step-number" style="background: var(--homework);">3</div>
+          <div class="step-title" style="color: var(--homework);">Create Letters</div>
+          <div class="step-content">
+            <p>Fill each box with a letter using your chosen method:</p>
+            <ul>
+              <li>Stamp with printing set or foam</li>
+              <li>Draw or paint directly</li>
+              <li>Collage cut-out letters</li>
+              <li>Any physical technique</li>
+            </ul>
+            <div class="important-notice">
+              <strong>Important:</strong> If stamping, remember letters need to be backwards on your stamp!
+            </div>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number" style="background: var(--homework);">4</div>
           <div class="step-title" style="color: var(--homework);">Scan</div>
           <div class="step-content">
             <p>Scan at <strong>300 DPI</strong>. Save as JPEG or PNG. Bring to class.</p>
@@ -859,27 +1158,27 @@ footer {
 
     <h2>Example</h2>
     <!-- PLACEHOLDER: homework-example.jpg -->
-    <img src="homework-example.jpg" alt="Completed stamped template" class="example-image clickable-image" onclick="openModal(this.src)">
-    <p class="image-caption">Completed stamped template ready for scanning</p>
+    <img src="homework-example.jpg" alt="Completed template with letters" class="example-image clickable-image" onclick="openModal(this.src)">
+    <p class="image-caption">Completed Calligraphr template ready for scanning</p>
 
     <div class="checklist">
       <h3>Homework Checklist ✓</h3>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Downloaded and printed template</div>
+          <div class="checklist-label">Downloaded and printed Calligraphr template</div>
         </div>
       </div>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Stamped letters into boxes</div>
+          <div class="checklist-label">Created letters in each box</div>
         </div>
       </div>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Scanned template</div>
+          <div class="checklist-label">Scanned template at 300 DPI</div>
         </div>
       </div>
     </div>
@@ -893,101 +1192,49 @@ footer {
   <!-- ==================== TASK 1 ==================== -->
   <div id="task1" class="content-section">
     <div class="section-banner inclass-banner">
-      TASK 1: Build Your Alphabet File
+      TASK 1: Upload Your Outcome
     </div>
 
-    <p>Cut out each letter and save in one PSD file with layers.</p>
+    <p>Upload your completed Calligraphr template showing your hand-crafted letters.</p>
 
-    <h2>Video Tutorial</h2>
-    <!-- PLACEHOLDER: Panopto video embed -->
-    <div class="video-container">
-      <!-- Replace the src below with your Panopto embed URL -->
-      <iframe src="YOUR_PANOPTO_EMBED_URL_HERE" allowfullscreen></iframe>
+    <h2>What to Upload</h2>
+    
+    <div class="info-box">
+      <strong>Your scanned template</strong> with all your hand-crafted letters completed. This shows your physical making process.
     </div>
 
-    <div class="workflow-box">
-      <div class="workflow-header">
-        <h3>Photoshop Steps</h3>
-      </div>
-      <div class="workflow-steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-title">Open and Clean</div>
-          <div class="step-content">
-            <p>Open your scan. Use <span class="shortcut">Image > Adjustments > Levels</span> to make the background white and ink dark.</p>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-title">New File</div>
-          <div class="step-content">
-            <p><span class="shortcut">File > New</span> — make it 2000 x 2000 pixels with <strong>transparent background</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-title">Copy Each Letter</div>
-          <div class="step-content">
-            <p>For each letter:</p>
-            <ul>
-              <li>Select with Rectangular Marquee</li>
-              <li>Copy (<span class="shortcut">Ctrl+C</span>) and paste (<span class="shortcut">Ctrl+V</span>) into new file</li>
-              <li>Use Magic Wand to select white, then delete</li>
-              <li>Name the layer (A, B, C...)</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-title">Save as PSD</div>
-          <div class="step-content">
-            <p><span class="shortcut">File > Save As</span> — choose <strong>Photoshop (.PSD)</strong>. This keeps your layers.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h2>Example Outcome</h2>
+    <h2>Example</h2>
     <!-- PLACEHOLDER: task1-example.jpg -->
-    <img src="task1-example.jpg" alt="Alphabet file with layers in Photoshop" class="example-image clickable-image" onclick="openModal(this.src)">
-    <p class="image-caption">Alphabet file showing layers panel</p>
+    <img src="task1-example.jpg" alt="Completed Calligraphr template" class="example-image clickable-image" onclick="openModal(this.src)">
+    <p class="image-caption">Scanned template ready for upload</p>
 
     <div class="checklist">
       <h3>Task 1 Checklist ✓</h3>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Cleaned scan with Levels</div>
+          <div class="checklist-label">Scanned template at 300 DPI</div>
         </div>
       </div>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Cut out letters with transparent background</div>
+          <div class="checklist-label">All letters visible and clear</div>
         </div>
       </div>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Named all layers</div>
-        </div>
-      </div>
-      <div class="checklist-item">
-        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
-        <div class="checklist-text">
-          <div class="checklist-label">Saved as PSD</div>
+          <div class="checklist-label">Uploaded to Padlet</div>
         </div>
       </div>
     </div>
 
-    <!-- Upload checkpoint -->
-    <div style="background: var(--inclass-banner); border: 2px solid var(--inclass); border-radius: 10px; padding: 20px; margin: 25px 0; text-align: center;">
-      <h3 style="color: var(--inclass); margin: 0 0 15px 0;">📤 Upload Task 1</h3>
-      <p style="margin: 0 0 15px 0;">Screenshot of your Layers panel.</p>
-      <a href="#" target="_blank" style="display: inline-block; background: var(--inclass); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">Upload to Padlet →</a>
+    <!-- Upload box -->
+    <div class="upload-box">
+      <h3>📤 Upload Your Template</h3>
+      <p>Upload your scanned Calligraphr template with completed letters.</p>
+      <a href="#" target="_blank" class="upload-btn">Upload to Padlet →</a>
     </div>
 
     <div class="nav-buttons">
@@ -999,83 +1246,158 @@ footer {
   <!-- ==================== TASK 2 ==================== -->
   <div id="task2" class="content-section">
     <div class="section-banner task2-banner">
-      TASK 2: Create a Subheading
+      TASK 2: Edit & Refine A3 Sheet
     </div>
 
-    <p>Use your alphabet to spell a short subheading for a portfolio page.</p>
+    <p>Bring together your hand-crafted subheading, references, and knowledge-based information to complete a section of your A3 sheet.</p>
 
-    <div class="info-box">
-      <strong>Think poetic, not descriptive.</strong> Choose a short title or quote that captures your research focus. Something evocative that introduces your ideas on that page.
+    <h2>Three Elements to Include</h2>
+    
+    <div class="three-column">
+      <div class="column-card">
+        <div class="icon">✋</div>
+        <h4>Hand-Crafted Subheading</h4>
+        <p>Select and arrange letters from your template to create a title that introduces your research focus.</p>
+      </div>
+      <div class="column-card">
+        <div class="icon">📚</div>
+        <h4>Referencing</h4>
+        <p>Add proper citations for artists, designers, or sources that inform your work. Use Harvard format.</p>
+      </div>
+      <div class="column-card">
+        <div class="icon">💡</div>
+        <h4>Knowledge-Based Info</h4>
+        <p>Include relevant context, analysis, or explanations that demonstrate understanding of your research.</p>
+      </div>
     </div>
 
-    <div class="workflow-box" style="border-color: #9b59b6;">
-      <div class="workflow-header" style="background: #9b59b6;">
+    <h2>Video Tutorial</h2>
+    <!-- PLACEHOLDER: Panopto video embed -->
+    <div class="video-container">
+      <iframe src="YOUR_PANOPTO_EMBED_URL_HERE" allowfullscreen></iframe>
+    </div>
+
+    <div class="workflow-box" style="border-color: var(--task2);">
+      <div class="workflow-header" style="background: var(--task2);">
         <h3>Steps</h3>
       </div>
       <div class="workflow-steps">
         <div class="step">
-          <div class="step-number" style="background: #9b59b6;">1</div>
-          <div class="step-title" style="color: #9b59b6;">Open Both Files</div>
+          <div class="step-number" style="background: var(--task2);">1</div>
+          <div class="step-title" style="color: var(--task2);">Open Your A3 Sheet</div>
           <div class="step-content">
-            <p>Open your alphabet PSD and your portfolio page.</p>
+            <p>Open your scanned A3 sheet in Photoshop.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number" style="background: #9b59b6;">2</div>
-          <div class="step-title" style="color: #9b59b6;">Copy Letters</div>
+          <div class="step-number" style="background: var(--task2);">2</div>
+          <div class="step-title" style="color: var(--task2);">Add Hand-Crafted Subheading</div>
           <div class="step-content">
-            <p>From your alphabet file, select each letter layer, copy (<span class="shortcut">Ctrl+C</span>) and paste (<span class="shortcut">Ctrl+V</span>) into your portfolio page.</p>
+            <p>Open your letter template in a separate tab. Use the <strong>Rectangular Marquee Tool</strong> <span class="shortcut">M</span> to select each letter, copy <span class="shortcut">Ctrl+C</span> and paste <span class="shortcut">Ctrl+V</span> into your A3 document. Arrange letters to spell your subheading.</p>
+            <ul>
+              <li>Select all letter layers</li>
+              <li>Group them <span class="shortcut">Ctrl+G</span></li>
+              <li>Use Free Transform <span class="shortcut">Ctrl+T</span> to resize</li>
+            </ul>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number" style="background: #9b59b6;">3</div>
-          <div class="step-title" style="color: #9b59b6;">Arrange</div>
+          <div class="step-number" style="background: var(--task2);">3</div>
+          <div class="step-title" style="color: var(--task2);">Add References</div>
           <div class="step-content">
-            <p>Use Move Tool (V) to position. Use <span class="shortcut">Ctrl+T</span> to resize. Keep it sensitive to your page — not too big.</p>
+            <p>Use the <strong>Type Tool</strong> <span class="shortcut">T</span> to add citations for any artists, designers, or sources shown on your page. Use your handwriting font for consistency.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number" style="background: var(--task2);">4</div>
+          <div class="step-title" style="color: var(--task2);">Add Knowledge-Based Information</div>
+          <div class="step-content">
+            <p>Include contextual text that shows your understanding:</p>
+            <ul>
+              <li>Brief analysis of artist's work or technique</li>
+              <li>Connection to your own practice</li>
+              <li>Historical or cultural context</li>
+              <li>Key concepts or terminology</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number" style="background: var(--task2);">5</div>
+          <div class="step-title" style="color: var(--task2);">Refine Layout</div>
+          <div class="step-content">
+            <p>Review your page composition. Ensure text is readable, elements are balanced, and there is visual hierarchy. Adjust spacing and positioning as needed.</p>
           </div>
         </div>
       </div>
     </div>
 
+    <h2>Referencing Format</h2>
+    
+    <div class="reference-example">
+      <h4>Harvard Referencing Examples</h4>
+      
+      <div class="label">For an artwork:</div>
+      <code>Hockney, D. (1967) A Bigger Splash [Acrylic on canvas]. London: Tate.</code>
+      
+      <div class="label">For a book:</div>
+      <code>Berger, J. (1972) Ways of Seeing. London: Penguin Books.</code>
+      
+      <div class="label">For a website:</div>
+      <code>Tate (2023) David Hockney. Available at: https://www.tate.org.uk (Accessed: 15 March 2025).</code>
+    </div>
+
     <div class="tip-box">
-      <h4>💡 Keep it subtle</h4>
-      <p style="margin: 0;">Your subheading should sit sensitively on the page. It introduces your research focus without dominating. The handmade texture adds character.</p>
+      <h4>💡 Tips for Success</h4>
+      <ul>
+        <li>Keep your subheading subtle — it introduces, not dominates</li>
+        <li>References should be small but readable</li>
+        <li>Your knowledge text should add insight, not just describe</li>
+        <li>Maintain visual balance across the page</li>
+      </ul>
     </div>
 
     <h2>Example Outcome</h2>
     <!-- PLACEHOLDER: task2-example.jpg -->
-    <img src="task2-example.jpg" alt="Portfolio page with stamped subheading" class="example-image clickable-image" onclick="openModal(this.src)">
-    <p class="image-caption">Stamped subheading positioned on portfolio page</p>
+    <img src="task2-example.jpg" alt="Refined A3 section with subheading, references and knowledge" class="example-image clickable-image" onclick="openModal(this.src)">
+    <p class="image-caption">A3 section with hand-crafted subheading, references, and knowledge-based information</p>
 
     <div class="checklist">
       <h3>Task 2 Checklist ✓</h3>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Created a short subheading</div>
+          <div class="checklist-label">Hand-crafted subheading added and positioned</div>
         </div>
       </div>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Positioned sensitively on page</div>
+          <div class="checklist-label">References added in Harvard format</div>
         </div>
       </div>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Saved portfolio page</div>
+          <div class="checklist-label">Knowledge-based information included</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Layout refined and balanced</div>
         </div>
       </div>
     </div>
 
-    <!-- Upload checkpoint -->
-    <div style="background: #f5eef8; border: 2px solid #9b59b6; border-radius: 10px; padding: 20px; margin: 25px 0; text-align: center;">
-      <h3 style="color: #9b59b6; margin: 0 0 15px 0;">📤 Upload Task 2</h3>
-      <p style="margin: 0 0 15px 0;">Screenshot of your portfolio page with subheading.</p>
-      <a href="#" target="_blank" style="display: inline-block; background: #9b59b6; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">Upload to Padlet →</a>
+    <!-- Upload box -->
+    <div class="upload-box" style="background: var(--task2-banner); border-color: var(--task2);">
+      <h3 style="color: var(--task2);">📤 Upload Your Refined A3 Section</h3>
+      <p>Screenshot showing your complete A3 section with subheading, references, and knowledge-based information.</p>
+      <a href="#" target="_blank" class="upload-btn" style="background: var(--task2);">Upload to Padlet →</a>
     </div>
 
     <div class="nav-buttons">
@@ -1086,71 +1408,199 @@ footer {
 
   <!-- ==================== TASK 3 ==================== -->
   <div id="task3" class="content-section">
-    <div class="section-banner quiz-banner">
-      TASK 3: Save Your Progress
+    <div class="section-banner task3-banner">
+      TASK 3: Reflect & Document Your Progress
     </div>
 
-    <p>Document your work and upload.</p>
+    <p>Use the Progress Documentation tool to reflect on your learning and create a PDF record of your work.</p>
 
-    <div class="workflow-box" style="border-color: var(--quiz);">
-      <div class="workflow-header" style="background: var(--quiz);">
+    <h2>Why Reflect?</h2>
+    <p>Reflection helps you understand what you've learned, identify challenges you overcame, and plan how to improve. It's an essential part of developing as a creative practitioner.</p>
+
+    <h2>The Four Reflection Questions</h2>
+    
+    <div class="reflection-grid">
+      <div class="reflection-card">
+        <div class="number">1</div>
+        <h4>Techniques Practiced</h4>
+        <p>What specific skills or techniques did you work on during this session?</p>
+      </div>
+      <div class="reflection-card">
+        <div class="number">2</div>
+        <h4>Challenges & Solutions</h4>
+        <p>What difficulties did you face and how did you solve them?</p>
+      </div>
+      <div class="reflection-card">
+        <div class="number">3</div>
+        <h4>What Worked Well</h4>
+        <p>What was successful in your approach? What are you pleased with?</p>
+      </div>
+      <div class="reflection-card">
+        <div class="number">4</div>
+        <h4>Next Steps</h4>
+        <p>What will you do differently or improve next time?</p>
+      </div>
+    </div>
+
+    <h2>Using the Progress Documentation Tool</h2>
+
+    <div class="workflow-box" style="border-color: var(--task3);">
+      <div class="workflow-header" style="background: var(--task3);">
         <h3>Steps</h3>
       </div>
       <div class="workflow-steps">
         <div class="step">
-          <div class="step-number" style="background: var(--quiz);">1</div>
-          <div class="step-title" style="color: var(--quiz);">Open Progress Tool</div>
+          <div class="step-number" style="background: var(--task3);">1</div>
+          <div class="step-title" style="color: var(--task3);">Open the Tool</div>
           <div class="step-content">
-            <a href="https://hsstokes.github.io/Progress_Documentation/" target="_blank" style="display: inline-block; background: var(--quiz); color: white; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: bold;">Open Progress Tool →</a>
+            <p>Click the button below to open the Progress Documentation tool in a new tab.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number" style="background: var(--quiz);">2</div>
-          <div class="step-title" style="color: var(--quiz);">Add Screenshots</div>
+          <div class="step-number" style="background: var(--task3);">2</div>
+          <div class="step-title" style="color: var(--task3);">Enter Your Name</div>
           <div class="step-content">
-            <p>Include: your stamped template, alphabet file layers, portfolio page with subheading.</p>
+            <p>Type your name in the text field at the top. This will appear on your PDF report.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number" style="background: var(--quiz);">3</div>
-          <div class="step-title" style="color: var(--quiz);">Download PDF</div>
+          <div class="step-number" style="background: var(--task3);">3</div>
+          <div class="step-title" style="color: var(--task3);">Add Progress Screenshots</div>
           <div class="step-content">
-            <p>Save your progress report.</p>
+            <p>Upload screenshots of your work from this session:</p>
+            <ul>
+              <li>Your completed Calligraphr template</li>
+              <li>Your refined A3 section with subheading</li>
+              <li>Any work-in-progress images</li>
+            </ul>
+            <p>Add a caption to each screenshot describing what it shows.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number" style="background: var(--task3);">4</div>
+          <div class="step-title" style="color: var(--task3);">Rate Your Confidence</div>
+          <div class="step-content">
+            <p>Select how confident you feel with the skills you practiced:</p>
+            <ul>
+              <li><strong>1 - Just starting:</strong> Still learning the basics</li>
+              <li><strong>2 - Getting there:</strong> Understanding but need more practice</li>
+              <li><strong>3 - Confident:</strong> Can do this independently</li>
+              <li><strong>4 - Could teach others:</strong> Fully comfortable with this skill</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number" style="background: var(--task3);">5</div>
+          <div class="step-title" style="color: var(--task3);">Answer Reflection Questions</div>
+          <div class="step-content">
+            <p>Complete all four reflection questions thoughtfully. Consider:</p>
+            <ul>
+              <li>What techniques you used to create your letters</li>
+              <li>Any challenges with stamping, scanning, or Photoshop</li>
+              <li>What you're proud of in your final outcome</li>
+              <li>How you might improve your letters or layout</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number" style="background: var(--task3);">6</div>
+          <div class="step-title" style="color: var(--task3);">Download Your PDF</div>
+          <div class="step-content">
+            <p>Click the "Download Progress Report (PDF)" button. Your PDF will include all your screenshots, captions, confidence rating, and reflections.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <h2>Example Outcome</h2>
-    <!-- PLACEHOLDER: task3-example.jpg -->
-    <img src="task3-example.jpg" alt="Progress tool screenshot" class="example-image clickable-image" onclick="openModal(this.src)">
-    <p class="image-caption">Completed progress documentation</p>
+    <!-- Tool Preview and Link -->
+    <div class="tool-preview">
+      <h3>📝 Progress Documentation Tool</h3>
+      <p>Record your progress, add screenshots with captions, rate your confidence, and answer reflection questions — all in one place.</p>
+      
+      <a href="https://hsstokes.github.io/Progress_Documentation/" target="_blank" class="tool-btn">
+        Open Progress Tool →
+      </a>
+      
+      <div class="tool-features">
+        <div class="tool-feature">
+          <span class="icon">📸</span>
+          <span>Upload screenshots</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">✏️</span>
+          <span>Add captions</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">⭐</span>
+          <span>Rate confidence</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">💭</span>
+          <span>Answer reflections</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">📄</span>
+          <span>Download PDF</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">📤</span>
+          <span>Upload to Padlet</span>
+        </div>
+      </div>
+    </div>
 
     <div class="checklist">
       <h3>Task 3 Checklist ✓</h3>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Added screenshots</div>
+          <div class="checklist-label">Entered my name</div>
         </div>
       </div>
       <div class="checklist-item">
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
-          <div class="checklist-label">Downloaded PDF</div>
+          <div class="checklist-label">Added progress screenshots with captions</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Rated my confidence level</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Answered all four reflection questions</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Downloaded PDF progress report</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Uploaded PDF to Padlet</div>
         </div>
       </div>
     </div>
 
-    <!-- Final Submit -->
-    <div style="background: linear-gradient(135deg, var(--secondary-light) 0%, #fff 100%); padding: 25px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); margin: 25px 0; border: 3px solid var(--secondary);">
-      <h3 style="color: var(--secondary); text-align: center; margin-top: 0; margin-bottom: 20px;">Upload Everything</h3>
-
+    <!-- Final Upload Reminder -->
+    <div style="background: linear-gradient(135deg, var(--task3-light) 0%, #fff 100%); padding: 25px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); margin: 25px 0; border: 3px solid var(--task3);">
+      <h3 style="color: var(--task3); text-align: center; margin-top: 0; margin-bottom: 15px;">📤 Final Step: Upload Your PDF</h3>
+      <p style="text-align: center; margin-bottom: 20px;">Once you've downloaded your Progress Report PDF, upload it to Padlet to complete this session.</p>
       <div style="text-align: center;">
-        <a href="#" target="_blank" style="display: inline-block; background: var(--secondary); color: white; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 5px 20px rgba(10, 128, 128, 0.4);">
-          📤 Upload to Padlet →
+        <a href="#" target="_blank" style="display: inline-block; background: var(--task3); color: white; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 5px 20px rgba(196, 92, 74, 0.4);">
+          Upload to Padlet →
         </a>
       </div>
     </div>
@@ -1167,7 +1617,7 @@ footer {
     <img class="modal-content" id="modalImage">
   </div>
 
-  <footer>© 2025 Creative Digital Skills — Stamped Display Alphabet</footer>
+  <footer>© 2025 Creative Digital Skills — Hand-Crafted Subheadings</footer>
 </div>
 
 <button class="print-button" onclick="window.print()">🖨️</button>
@@ -1209,7 +1659,7 @@ function toggleChecked(element) {
   
   const checkboxes = document.querySelectorAll('.checklist-checkbox');
   const states = Array.from(checkboxes).map(cb => cb.classList.contains('checked'));
-  localStorage.setItem('display-alphabet-checklist', JSON.stringify(states));
+  localStorage.setItem('handcrafted-subheadings-checklist', JSON.stringify(states));
 }
 
 function openModal(src) {
@@ -1240,7 +1690,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.nav-block[data-section="overview"]').classList.add('active-block');
   updateProgressBar();
   
-  const savedStates = localStorage.getItem('display-alphabet-checklist');
+  const savedStates = localStorage.getItem('handcrafted-subheadings-checklist');
   if (savedStates) {
     const states = JSON.parse(savedStates);
     const checkboxes = document.querySelectorAll('.checklist-checkbox');
