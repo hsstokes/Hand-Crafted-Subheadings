@@ -25,6 +25,10 @@
   --task3: #c45c4a;
   --task3-light: #fdf5f3;
   --task3-banner: #fceae6;
+  --optionA: #2e86ab;
+  --optionA-light: #e8f4f8;
+  --optionB: #a23b72;
+  --optionB-light: #fdf0f6;
 }
 
 * {
@@ -976,6 +980,349 @@ footer {
 .tool-feature .icon {
   font-size: 1.3rem;
 }
+
+/* Method choice styles */
+.method-choice {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.method-option {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.method-option::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}
+
+.method-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.method-option.option-a {
+  border: 2px solid var(--optionA);
+}
+
+.method-option.option-a::before {
+  background: var(--optionA);
+}
+
+.method-option.option-b {
+  border: 2px solid var(--optionB);
+}
+
+.method-option.option-b::before {
+  background: var(--optionB);
+}
+
+.method-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.method-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.option-a .method-icon {
+  background: var(--optionA-light);
+  border: 2px solid var(--optionA);
+}
+
+.option-b .method-icon {
+  background: var(--optionB-light);
+  border: 2px solid var(--optionB);
+}
+
+.method-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.option-a .method-title {
+  color: var(--optionA);
+}
+
+.option-b .method-title {
+  color: var(--optionB);
+}
+
+.method-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.method-description {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.method-best-for {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.option-a .method-best-for {
+  background: var(--optionA-light);
+  border-left: 4px solid var(--optionA);
+}
+
+.option-b .method-best-for {
+  background: var(--optionB-light);
+  border-left: 4px solid var(--optionB);
+}
+
+.method-best-for strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.option-a .method-best-for strong {
+  color: var(--optionA);
+}
+
+.option-b .method-best-for strong {
+  color: var(--optionB);
+}
+
+.method-best-for ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+}
+
+.method-best-for li {
+  margin-bottom: 4px;
+}
+
+.method-pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.pros, .cons {
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.pros {
+  background: #e8f5e9;
+}
+
+.cons {
+  background: #fff3e0;
+}
+
+.pros strong, .cons strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+.pros strong {
+  color: #2e7d32;
+}
+
+.cons strong {
+  color: #e65100;
+}
+
+.pros ul, .cons ul {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.pros li, .cons li {
+  margin-bottom: 3px;
+}
+
+/* Comparison table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.comparison-table th {
+  background: var(--secondary);
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.comparison-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.comparison-table .option-a-col {
+  background: var(--optionA-light);
+}
+
+.comparison-table .option-b-col {
+  background: var(--optionB-light);
+}
+
+/* Decision helper */
+.decision-helper {
+  background: linear-gradient(135deg, #f5f5f5 0%, #fff 100%);
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.decision-helper h3 {
+  color: var(--secondary);
+  margin-top: 0;
+}
+
+.decision-question {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.decision-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.decision-btn {
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.decision-btn:hover {
+  transform: translateY(-3px);
+}
+
+.decision-btn.btn-a {
+  background: var(--optionA);
+  color: white;
+}
+
+.decision-btn.btn-a:hover {
+  box-shadow: 0 5px 20px rgba(46, 134, 171, 0.4);
+}
+
+.decision-btn.btn-b {
+  background: var(--optionB);
+  color: white;
+}
+
+.decision-btn.btn-b:hover {
+  box-shadow: 0 5px 20px rgba(162, 59, 114, 0.4);
+}
+
+/* Tab system for Task 2 */
+.method-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.method-tab {
+  padding: 12px 25px;
+  border: 2px solid #ddd;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.method-tab:hover {
+  background: #eee;
+}
+
+.method-tab.active-tab-a {
+  background: var(--optionA);
+  color: white;
+  border-color: var(--optionA);
+}
+
+.method-tab.active-tab-b {
+  background: var(--optionB);
+  color: white;
+  border-color: var(--optionB);
+}
+
+.method-content {
+  display: none;
+  border: 2px solid #ddd;
+  border-radius: 0 10px 10px 10px;
+  padding: 25px;
+  background: white;
+  margin-top: -2px;
+}
+
+.method-content.active {
+  display: block;
+}
+
+.method-content.content-a {
+  border-color: var(--optionA);
+}
+
+.method-content.content-b {
+  border-color: var(--optionB);
+}
 </style>
 </head>
 <body>
@@ -1089,6 +1436,94 @@ footer {
       </div>
     </div>
 
+    <h2>Two Ways to Use Your Letters</h2>
+    <p>After creating your hand-crafted letters, you have <strong>two options</strong> for adding them to your portfolio:</p>
+
+    <div class="method-choice">
+      <div class="method-option option-a">
+        <div class="method-header">
+          <div class="method-icon">🔤</div>
+          <div>
+            <h4 class="method-title">Option A: Create a Font</h4>
+            <p class="method-subtitle">Upload to Calligraphr</p>
+          </div>
+        </div>
+        <p class="method-description">Upload your scanned template back to Calligraphr to automatically convert your letters into an installable font file.</p>
+        <div class="method-best-for">
+          <strong>✓ Best for:</strong>
+          <ul>
+            <li>Clean, consistent letters</li>
+            <li>Using the same letters many times</li>
+            <li>Easy resizing and editing</li>
+            <li>Drawn or painted letters</li>
+          </ul>
+        </div>
+        <div class="method-pros-cons">
+          <div class="pros">
+            <strong>Pros</strong>
+            <ul>
+              <li>Type normally</li>
+              <li>Auto spacing</li>
+              <li>Reusable</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <strong>Cons</strong>
+            <ul>
+              <li>Loses some texture</li>
+              <li>Letters vectorised</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="method-option option-b">
+        <div class="method-header">
+          <div class="method-icon">✂️</div>
+          <div>
+            <h4 class="method-title">Option B: Cut Out in Photoshop</h4>
+            <p class="method-subtitle">Keep raster texture</p>
+          </div>
+        </div>
+        <p class="method-description">Select and copy individual letters from your scanned template, placing them manually in your portfolio document.</p>
+        <div class="method-best-for">
+          <strong>✓ Best for:</strong>
+          <ul>
+            <li>Heavy texture or imperfections</li>
+            <li>Collage letters</li>
+            <li>Stamps with ink variations</li>
+            <li>Unique, one-off titles</li>
+          </ul>
+        </div>
+        <div class="method-pros-cons">
+          <div class="pros">
+            <strong>Pros</strong>
+            <ul>
+              <li>Full texture kept</li>
+              <li>Authentic look</li>
+              <li>More control</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <strong>Cons</strong>
+            <ul>
+              <li>More time needed</li>
+              <li>Manual placement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="decision-helper">
+      <h3>🤔 Which Should I Choose?</h3>
+      <p class="decision-question">Do you want to keep all the texture, ink variations, and imperfections in your letters?</p>
+      <div class="decision-buttons">
+        <button class="decision-btn btn-b" onclick="alert('Choose Option B: Cut Out in Photoshop\n\nThis keeps all your texture and gives the most authentic hand-made look.')">Yes, keep all texture</button>
+        <button class="decision-btn btn-a" onclick="alert('Choose Option A: Create a Font\n\nThis is faster and easier to use, perfect for cleaner letter styles.')">No, clean letters are fine</button>
+      </div>
+    </div>
+
     <h2>Example</h2>
     <!-- PLACEHOLDER: overview-example.jpg -->
     <img src="overview-example.jpg" alt="Example of hand-crafted subheading on portfolio page" class="example-image clickable-image" onclick="openModal(this.src)">
@@ -1153,6 +1588,18 @@ footer {
             <p>Scan at <strong>300 DPI</strong>. Save as JPEG or PNG. Bring to class.</p>
           </div>
         </div>
+
+        <div class="step">
+          <div class="step-number" style="background: var(--homework);">5</div>
+          <div class="step-title" style="color: var(--homework);">Decide Your Method</div>
+          <div class="step-content">
+            <p>Look at your scanned letters and decide which method you'll use in class:</p>
+            <ul>
+              <li><strong style="color: var(--optionA);">Option A (Font):</strong> If your letters are clean and consistent</li>
+              <li><strong style="color: var(--optionB);">Option B (Photoshop):</strong> If you want to keep heavy texture</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1179,6 +1626,12 @@ footer {
         <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
         <div class="checklist-text">
           <div class="checklist-label">Scanned template at 300 DPI</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Decided which method to use (Font or Photoshop)</div>
         </div>
       </div>
     </div>
@@ -1271,67 +1724,209 @@ footer {
       </div>
     </div>
 
-    <h2>Video Tutorial</h2>
-    <!-- PLACEHOLDER: Panopto video embed -->
-    <div class="video-container">
-      <iframe src="YOUR_PANOPTO_EMBED_URL_HERE" allowfullscreen></iframe>
+    <h2>Choose Your Method</h2>
+    <p>Select the tab that matches how you want to add your letters:</p>
+
+    <div class="method-tabs">
+      <button class="method-tab active-tab-a" onclick="switchMethodTab('a')">🔤 Option A: Create Font</button>
+      <button class="method-tab" onclick="switchMethodTab('b')">✂️ Option B: Photoshop Cut-Out</button>
     </div>
 
-    <div class="workflow-box" style="border-color: var(--task2);">
-      <div class="workflow-header" style="background: var(--task2);">
-        <h3>Steps</h3>
+    <!-- OPTION A CONTENT -->
+    <div id="method-content-a" class="method-content content-a active">
+      <h3 style="color: var(--optionA); margin-top: 0;">Option A: Create a Font with Calligraphr</h3>
+      <p>Convert your hand-crafted letters into an installable font, then type your subheadings normally.</p>
+
+      <div class="workflow-box" style="border-color: var(--optionA);">
+        <div class="workflow-header" style="background: var(--optionA);">
+          <h3>Steps for Option A</h3>
+        </div>
+        <div class="workflow-steps">
+          <div class="step">
+            <div class="step-number" style="background: var(--optionA);">1</div>
+            <div class="step-title" style="color: var(--optionA);">Upload Template to Calligraphr</div>
+            <div class="step-content">
+              <ul>
+                <li>Go to <a href="https://www.calligraphr.com" target="_blank" style="color: var(--optionA);">Calligraphr.com</a> and log in</li>
+                <li>Click <strong>"My Fonts"</strong> → <strong>"Upload Template"</strong></li>
+                <li>Select your scanned template image</li>
+                <li>Calligraphr will automatically extract each letter</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionA);">2</div>
+            <div class="step-title" style="color: var(--optionA);">Preview and Adjust</div>
+            <div class="step-content">
+              <ul>
+                <li>Check each letter has been detected correctly</li>
+                <li>Adjust baseline or sizing if needed</li>
+                <li>Preview how your font looks with sample text</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionA);">3</div>
+            <div class="step-title" style="color: var(--optionA);">Build and Download Font</div>
+            <div class="step-content">
+              <ul>
+                <li>Click <strong>"Build Font"</strong></li>
+                <li>Download the <strong>.ttf</strong> or <strong>.otf</strong> file</li>
+                <li>Double-click the file to install on your computer</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionA);">4</div>
+            <div class="step-title" style="color: var(--optionA);">Use in Photoshop</div>
+            <div class="step-content">
+              <ul>
+                <li>Open your A3 sheet in Photoshop</li>
+                <li>Select the <strong>Type Tool</strong> <span class="shortcut">T</span></li>
+                <li>Choose your new font from the font menu</li>
+                <li>Type your subheading text</li>
+                <li>Position and resize using <span class="shortcut">Ctrl+T</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionA);">5</div>
+            <div class="step-title" style="color: var(--optionA);">Add References & Knowledge</div>
+            <div class="step-content">
+              <ul>
+                <li>Use your handwriting font for citations and notes</li>
+                <li>Add Harvard references for any sources shown</li>
+                <li>Include contextual analysis or explanations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="workflow-steps">
-        <div class="step">
-          <div class="step-number" style="background: var(--task2);">1</div>
-          <div class="step-title" style="color: var(--task2);">Open Your A3 Sheet</div>
-          <div class="step-content">
-            <p>Open your scanned A3 sheet in Photoshop.</p>
+
+      <div class="tip-box">
+        <h4>💡 Tips for Option A</h4>
+        <ul>
+          <li>Calligraphr free tier allows 75 characters — usually enough for A-Z uppercase</li>
+          <li>If the font doesn't appear in Photoshop, restart Photoshop after installing</li>
+          <li>You can create multiple fonts for different styles</li>
+        </ul>
+      </div>
+
+      <!-- PLACEHOLDER: Video for Option A -->
+      <h3>Video Tutorial: Creating Your Font</h3>
+      <div class="video-container" style="border-color: var(--optionA);">
+        <iframe src="YOUR_PANOPTO_OPTION_A_URL_HERE" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- OPTION B CONTENT -->
+    <div id="method-content-b" class="method-content content-b">
+      <h3 style="color: var(--optionB); margin-top: 0;">Option B: Cut Out Letters in Photoshop</h3>
+      <p>Keep all the texture and character of your letters by selecting and placing them manually.</p>
+
+      <div class="workflow-box" style="border-color: var(--optionB);">
+        <div class="workflow-header" style="background: var(--optionB);">
+          <h3>Steps for Option B</h3>
+        </div>
+        <div class="workflow-steps">
+          <div class="step">
+            <div class="step-number" style="background: var(--optionB);">1</div>
+            <div class="step-title" style="color: var(--optionB);">Open Both Files</div>
+            <div class="step-content">
+              <ul>
+                <li>Open your A3 sheet in Photoshop</li>
+                <li>Open your scanned letter template in a <strong>separate tab</strong></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionB);">2</div>
+            <div class="step-title" style="color: var(--optionB);">Select a Letter</div>
+            <div class="step-content">
+              <ul>
+                <li>Go to your template tab</li>
+                <li>Use the <strong>Rectangular Marquee Tool</strong> <span class="shortcut">M</span></li>
+                <li>Draw a selection around the letter you need</li>
+                <li>Copy with <span class="shortcut">Ctrl+C</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionB);">3</div>
+            <div class="step-title" style="color: var(--optionB);">Paste and Position</div>
+            <div class="step-content">
+              <ul>
+                <li>Switch to your A3 document tab</li>
+                <li>Paste with <span class="shortcut">Ctrl+V</span></li>
+                <li>Use <strong>Move Tool</strong> <span class="shortcut">V</span> to position</li>
+                <li>Repeat for each letter in your subheading</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionB);">4</div>
+            <div class="step-title" style="color: var(--optionB);">Remove White Background (Optional)</div>
+            <div class="step-content">
+              <p>If you want to remove the white paper background around your letters:</p>
+              <ul>
+                <li>Select the letter layer</li>
+                <li>Go to <strong>Select → Color Range</strong></li>
+                <li>Click on the white background</li>
+                <li>Adjust <strong>Fuzziness</strong> slider</li>
+                <li>Click OK, then press <span class="shortcut">Delete</span></li>
+              </ul>
+              <p>Or use <strong>Blending Mode: Multiply</strong> on the layer to make white transparent.</p>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionB);">5</div>
+            <div class="step-title" style="color: var(--optionB);">Group and Resize</div>
+            <div class="step-content">
+              <ul>
+                <li>Select all your letter layers in the Layers panel</li>
+                <li>Group them with <span class="shortcut">Ctrl+G</span></li>
+                <li>Use <strong>Free Transform</strong> <span class="shortcut">Ctrl+T</span> to resize the whole word</li>
+                <li>Hold <span class="shortcut">Shift</span> while dragging corners to keep proportions</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number" style="background: var(--optionB);">6</div>
+            <div class="step-title" style="color: var(--optionB);">Add References & Knowledge</div>
+            <div class="step-content">
+              <ul>
+                <li>Use your handwriting font for citations and notes</li>
+                <li>Add Harvard references for any sources shown</li>
+                <li>Include contextual analysis or explanations</li>
+              </ul>
+            </div>
           </div>
         </div>
-        
-        <div class="step">
-          <div class="step-number" style="background: var(--task2);">2</div>
-          <div class="step-title" style="color: var(--task2);">Add Hand-Crafted Subheading</div>
-          <div class="step-content">
-            <p>Open your letter template in a separate tab. Use the <strong>Rectangular Marquee Tool</strong> <span class="shortcut">M</span> to select each letter, copy <span class="shortcut">Ctrl+C</span> and paste <span class="shortcut">Ctrl+V</span> into your A3 document. Arrange letters to spell your subheading.</p>
-            <ul>
-              <li>Select all letter layers</li>
-              <li>Group them <span class="shortcut">Ctrl+G</span></li>
-              <li>Use Free Transform <span class="shortcut">Ctrl+T</span> to resize</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-number" style="background: var(--task2);">3</div>
-          <div class="step-title" style="color: var(--task2);">Add References</div>
-          <div class="step-content">
-            <p>Use the <strong>Type Tool</strong> <span class="shortcut">T</span> to add citations for any artists, designers, or sources shown on your page. Use your handwriting font for consistency.</p>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-number" style="background: var(--task2);">4</div>
-          <div class="step-title" style="color: var(--task2);">Add Knowledge-Based Information</div>
-          <div class="step-content">
-            <p>Include contextual text that shows your understanding:</p>
-            <ul>
-              <li>Brief analysis of artist's work or technique</li>
-              <li>Connection to your own practice</li>
-              <li>Historical or cultural context</li>
-              <li>Key concepts or terminology</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="step">
-          <div class="step-number" style="background: var(--task2);">5</div>
-          <div class="step-title" style="color: var(--task2);">Refine Layout</div>
-          <div class="step-content">
-            <p>Review your page composition. Ensure text is readable, elements are balanced, and there is visual hierarchy. Adjust spacing and positioning as needed.</p>
-          </div>
-        </div>
+      </div>
+
+      <div class="tip-box">
+        <h4>💡 Tips for Option B</h4>
+        <ul>
+          <li>Keep letter layers organised — name them or group by word</li>
+          <li><strong>Multiply blending mode</strong> is the quickest way to remove white backgrounds</li>
+          <li>Adjust letter spacing manually for the best look</li>
+          <li>You can rotate individual letters slightly for a more organic feel</li>
+        </ul>
+      </div>
+
+      <!-- PLACEHOLDER: Video for Option B -->
+      <h3>Video Tutorial: Photoshop Cut-Out Method</h3>
+      <div class="video-container" style="border-color: var(--optionB);">
+        <iframe src="YOUR_PANOPTO_OPTION_B_URL_HERE" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -1348,16 +1943,6 @@ footer {
       
       <div class="label">For a website:</div>
       <code>Tate (2023) David Hockney. Available at: https://www.tate.org.uk (Accessed: 15 March 2025).</code>
-    </div>
-
-    <div class="tip-box">
-      <h4>💡 Tips for Success</h4>
-      <ul>
-        <li>Keep your subheading subtle — it introduces, not dominates</li>
-        <li>References should be small but readable</li>
-        <li>Your knowledge text should add insight, not just describe</li>
-        <li>Maintain visual balance across the page</li>
-      </ul>
     </div>
 
     <h2>Example Outcome</h2>
@@ -1500,7 +2085,7 @@ footer {
             <p>Complete all four reflection questions thoughtfully. Consider:</p>
             <ul>
               <li>What techniques you used to create your letters</li>
-              <li>Any challenges with stamping, scanning, or Photoshop</li>
+              <li>Any challenges with stamping, scanning, or your chosen method</li>
               <li>What you're proud of in your final outcome</li>
               <li>How you might improve your letters or layout</li>
             </ul>
@@ -1659,7 +2244,7 @@ function toggleChecked(element) {
   
   const checkboxes = document.querySelectorAll('.checklist-checkbox');
   const states = Array.from(checkboxes).map(cb => cb.classList.contains('checked'));
-  localStorage.setItem('handcrafted-subheadings-checklist', JSON.stringify(states));
+  localStorage.setItem('handcrafted-subheadings-checklist-v2', JSON.stringify(states));
 }
 
 function openModal(src) {
@@ -1680,6 +2265,26 @@ window.onclick = function(event) {
   }
 }
 
+function switchMethodTab(option) {
+  // Update tab buttons
+  document.querySelectorAll('.method-tab').forEach(tab => {
+    tab.classList.remove('active-tab-a', 'active-tab-b');
+  });
+  
+  // Update content visibility
+  document.querySelectorAll('.method-content').forEach(content => {
+    content.classList.remove('active');
+  });
+  
+  if (option === 'a') {
+    document.querySelector('.method-tab:first-child').classList.add('active-tab-a');
+    document.getElementById('method-content-a').classList.add('active');
+  } else {
+    document.querySelector('.method-tab:last-child').classList.add('active-tab-b');
+    document.getElementById('method-content-b').classList.add('active');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.nav-block').forEach(block => {
     block.addEventListener('click', () => {
@@ -1690,7 +2295,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.nav-block[data-section="overview"]').classList.add('active-block');
   updateProgressBar();
   
-  const savedStates = localStorage.getItem('handcrafted-subheadings-checklist');
+  const savedStates = localStorage.getItem('handcrafted-subheadings-checklist-v2');
   if (savedStates) {
     const states = JSON.parse(savedStates);
     const checkboxes = document.querySelectorAll('.checklist-checkbox');
